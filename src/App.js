@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+
 import CryptoCoinList from "./Components/cryptoCoinList";
-import CryptoCoin from "./Components/cryptoCoin";
-import Container from "./Components/container";
+import NewsContainer from "./Components/NewsContainer/NewsContainer";
+
 
 class App extends React.Component {
   state = {
@@ -17,15 +18,18 @@ class App extends React.Component {
     this.setState({
       cryptos: Object.values(response.Data)
     });
-    console.log(this.state.cryptos);
   }
 
   render() {
+
     return <div className="App">
     <CryptoCoinList
     coins={this.state.cryptos}
     />
+         <NewsContainer />
     </div>;
+    );
+
   }
 }
 
