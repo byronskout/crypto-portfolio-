@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import NewsContainer from "./Components/NewsContainer/NewsContainer";
 
 class App extends React.Component {
   state = {
@@ -14,11 +15,14 @@ class App extends React.Component {
     this.setState({
       cryptos: Object.values(response.Data)
     });
-    console.log(this.state.cryptos);
   }
 
   render() {
-    return <div className="App">app</div>;
+    return (
+      <div className="App">
+        <NewsContainer />
+      </div>
+    );
   }
 }
 
