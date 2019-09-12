@@ -1,5 +1,8 @@
 import React from "react";
 import "./App.css";
+import CryptoCoinList from "./Components/cryptoCoinList";
+import CryptoCoin from "./Components/cryptoCoin";
+import Container from "./Components/container";
 
 class App extends React.Component {
   state = {
@@ -8,7 +11,7 @@ class App extends React.Component {
 
   async componentDidMount() {
     const request = await fetch(
-      "https://min-api.cryptocompare.com/data/all/coinlist"
+      "https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=GBP"
     );
     const response = await request.json();
     this.setState({
@@ -18,7 +21,11 @@ class App extends React.Component {
   }
 
   render() {
-    return <div className="App">app</div>;
+    return <div className="App">
+    <CryptoCoinList
+    coins={this.state.cryptos}
+    />
+    </div>;
   }
 }
 
