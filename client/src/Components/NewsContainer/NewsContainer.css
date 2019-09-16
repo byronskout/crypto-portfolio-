@@ -1,0 +1,10 @@
+.newsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #f1f1f1;
+}
+
+h2 {
+  background-color: #f1f1f1;
+}
