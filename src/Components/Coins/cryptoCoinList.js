@@ -1,6 +1,7 @@
 import React from "react";
 import CryptoCoin from "./cryptoCoin";
 import CryptoSearch from "./cryptoSearch";
+import CoinPage from "../CoinPage/CoinPage";
 import "./crypto.css";
 
 class CryptoCoinList extends React.Component {

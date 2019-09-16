@@ -2,8 +2,6 @@ import React from "react";
 import Container from "./container";
 import "./crypto.css";
 
-
-
 const CryptoCoin = (props) => {
     const { cryptos } = props
     const link = `https://www.cryptocompare.com${cryptos.CoinInfo.ImageUrl}`
