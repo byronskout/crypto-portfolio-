@@ -2,6 +2,8 @@ import React from "react";
 import Container from "./container";
 import "./crypto.css";
 
+
+
 const CryptoCoin = (props) => {
     const { cryptos } = props
     const link = `https://www.cryptocompare.com${cryptos.CoinInfo.ImageUrl}`
@@ -16,10 +18,10 @@ const CryptoCoin = (props) => {
           <h3 className="card-title">Price: {cryptos.DISPLAY.GBP.PRICE}</h3>
           <h3 className="card-title" style={int > 0 ? { color:'green'} : {color: 'red'} }>Change: {cryptos.DISPLAY.GBP.CHANGE24HOUR}</h3>
           </Container>
-      </div>
-      </div>
-    );
-  };
 
+      </div>
+    </div>
+  );
+};
 
 export default CryptoCoin;
