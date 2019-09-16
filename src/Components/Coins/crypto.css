@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .flexm {
     display: flex;
     flex-direction: column;
@@ -9,5 +11,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     background-color: #f1f1f1;
+}
+
+.search-coin {
+  margin-top: 15px;
+  padding: 8px;
+  font-family: 'Montserrat', sans-serif;
 }
   

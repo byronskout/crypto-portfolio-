@@ -1,5 +1,6 @@
 import React from "react";
 import CryptoCoin from "./cryptoCoin";
+import CryptoSearch from "./cryptoSearch";
 import "./crypto.css";
 
 class CryptoCoinList extends React.Component {
@@ -50,8 +51,9 @@ class CryptoCoinList extends React.Component {
   render() {
     return (
       <div>
-        <input
-          placeholder="Seach..."
+        <input 
+          className ="search-coin"
+          placeholder="Search..."
           onChange={this.onChange}
           value={this.state.searchTerm}
           type="text"
@@ -71,9 +73,7 @@ class CryptoCoinList extends React.Component {
             <div className="flex">
               {this.state.searchResults.pop().map(item => {
                 return (
-                  <div cryptos={item} key={item.id}>
-                    {item.FullName}
-                  </div>
+                  <CryptoSearch searchResults={item} key={item.id} />
                 );
               })}
             </div>
