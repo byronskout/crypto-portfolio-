@@ -1,36 +1,21 @@
 import React from "react";
 import "./App.css";
 
-import CryptoCoinList from "./Components/cryptoCoinList";
+import CryptoCoinList from "./Components/Coins/cryptoCoinList";
 import NewsContainer from "./Components/NewsContainer/NewsContainer";
-
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 class App extends React.Component {
-  state = {
-    cryptos: []
-  };
-
-  async componentDidMount() {
-    const request = await fetch(
-      "https://min-api.cryptocompare.com/data/top/totalvolfull?limit=10&tsym=GBP"
-    );
-    const response = await request.json();
-    this.setState({
-      cryptos: Object.values(response.Data)
-    });
-  }
-
   render() {
-
-    return <div className="App">
-    <CryptoCoinList
-    coins={this.state.cryptos}
-    />
-         <NewsContainer />
-    </div>;
-    );
-
-  }
+    return( 
+      <div className="App">
+        <Header />
+        <CryptoCoinList />
+        <NewsContainer />
+        <Footer />
+      </div>
+    )}
 }
 
 export default App;
