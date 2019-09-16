@@ -11,10 +11,10 @@ const CryptoCoin = (props) => {
         <div>
          <div className="flexm">
           <Container>
-          <img className="coin-image" src={link} alt={cryptos.CoinInfo.Name} width="100px" />
-          <h2 className="card-title">{cryptos.CoinInfo.Name}</h2>
-          <h2 className="card-title">Price: {cryptos.DISPLAY.GBP.PRICE}</h2>
-          <h2 className="card-title" style={int > 0 ? { color:'green'} : {color: 'red'} }>Change: {cryptos.DISPLAY.GBP.CHANGE24HOUR}</h2>
+          <img className="coin-image" src={link} alt={cryptos.CoinInfo.Name} width="70px" />
+          <h3 className="card-title">{cryptos.CoinInfo.Name}</h3>
+          <h3 className="card-title">Price: {cryptos.DISPLAY.GBP.PRICE}</h3>
+          <h3 className="card-title" style={int > 0 ? { color:'green'} : {color: 'red'} }>Change: {cryptos.DISPLAY.GBP.CHANGE24HOUR}</h3>
           </Container>
       </div>
       </div>
