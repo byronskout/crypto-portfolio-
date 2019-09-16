@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .App {
   text-align: center;
   margin: 0;
   padding: 0;
+  background-color: #f1f1f1;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-logo {
@@ -12,7 +16,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
