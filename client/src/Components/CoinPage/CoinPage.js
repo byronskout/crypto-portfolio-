@@ -10,8 +10,8 @@ const CoinPage = props => {
           <img className="coin-image" src={link} width="150px" />
           <h2>Price: {props.location.data.DISPLAY.GBP.PRICE}</h2>
           <h2>Algorithm: {props.location.data.CoinInfo.Algorithm}</h2>
-          <h2>High Day: {props.location.data.DISPLAY.GBP.HIGHDAY}</h2>
-          <h2>Low Day: {props.location.data.DISPLAY.GBP.LOWDAY}</h2>
+          <h2>High Today: {props.location.data.DISPLAY.GBP.HIGHDAY}</h2>
+          <h2>Low Today: {props.location.data.DISPLAY.GBP.LOWDAY}</h2>
           <h2>Supply: {props.location.data.DISPLAY.GBP.SUPPLY}</h2>
         </div>
     );
