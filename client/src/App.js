@@ -18,14 +18,8 @@ class App extends React.Component {
         <Router>
           <Switch>
         <Route exact path="/" component={Home}/>
-        </Switch>
-        <Switch>
           <Route exact path="/portfolio" component={Portfolio}/>
-        </Switch>
-        <Switch>
           <Route exact path="/cryptos/:id" component={CoinPage}/>
-        </Switch>
-        <Switch>
           <Route exact path="/searched/:id" component={CoinPageResult}/>
         </Switch>
         </Router>
