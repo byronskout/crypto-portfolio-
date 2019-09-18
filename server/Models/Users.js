@@ -13,11 +13,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  Portfolio: {
-    Type: Array
-  }
+  Portfolio: []
 });
 
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
+git;
