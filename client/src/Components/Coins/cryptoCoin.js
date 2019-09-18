@@ -12,7 +12,7 @@ const CryptoCoin = (props) => {
     return (
       <Link style={{ textDecoration: 'none' }} 
       to={{
-        pathname: `/cryptos/${cryptos.CoinInfo.Id}`,
+        pathname: `/cryptos/${cryptos.CoinInfo.Name}`,
         data: cryptos
       }}
     >

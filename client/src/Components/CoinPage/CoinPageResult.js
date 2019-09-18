@@ -32,7 +32,7 @@ class CoinPageResult extends React.Component {
     return (
       <div className="single-img-con">
         <h2>{CoinName}</h2>
-        <img className="coin-image" src={link} width="150px" />
+        <img className="coin-image" alt={CoinName} src={link} width="150px" />
         <h2>Algorithm: {Algorithm}</h2>
       </div>
     );

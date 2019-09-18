@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Home from './Homepage/Home';
-import Portfolio from "./Components/Portfolio/Portofolio";
+import NewsContainer from "./Components/NewsContainer/NewsContainer";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import CoinPage from "./Components/CoinPage/CoinPage";
@@ -18,7 +18,7 @@ class App extends React.Component {
         <Router>
           <Switch>
         <Route exact path="/" component={Home}/>
-          <Route exact path="/portfolio" component={Portfolio}/>
+          <Route exact path="/news" component={NewsContainer}/>
           <Route exact path="/cryptos/:id" component={CoinPage}/>
           <Route exact path="/searched/:id" component={CoinPageResult}/>
         </Switch>
