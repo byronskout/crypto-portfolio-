@@ -26,8 +26,6 @@ class CryptoCoinList extends React.Component {
     this.setState({
       allCryptos: Object.values(allresponse.Data)
     });
-    console.log(this.state.allCryptos);
-    console.log(this.state.searchResults);
   }
 
   onChange = e => {
@@ -45,14 +43,13 @@ class CryptoCoinList extends React.Component {
     this.setState({
       searchResults: [...this.state.searchResults, filter]
     });
-    console.log(this.state.searchResults);
   };
 
   render() {
     return (
       <div>
-        <input 
-          className ="search-coin"
+        <input
+          className="search-coin"
           placeholder="Search..."
           onChange={this.onChange}
           value={this.state.searchTerm}
@@ -71,11 +68,12 @@ class CryptoCoinList extends React.Component {
           <div>
             <h2>Search results</h2>
             <div className="flex">
-              {this.state.searchResults.pop().slice(0, 9).map(item => {
-                return (
-                  <CryptoSearch searchResults={item} key={item.id} />
-                );
-              })}
+              {this.state.searchResults
+                .pop()
+                .slice(0, 9)
+                .map(item => {
+                  return <CryptoSearch searchResults={item} key={item.id} />;
+                })}
             </div>
             <button
               onClick={() =>

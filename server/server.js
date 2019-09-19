@@ -3,6 +3,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 //Routes
 const userRoutes = require("./Routes/User");
@@ -16,7 +17,7 @@ mongoose.connect(
     console.log("MongoDb Connected");
   }
 );
-
+app.use(cors());
 app.use(morgan("tiny"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

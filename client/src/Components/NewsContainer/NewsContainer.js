@@ -16,7 +16,6 @@ class NewsContainer extends React.Component {
     this.setState({
       news: filteredNews
     });
-    console.log(this.state.news);
   }
 
   render() {

@@ -23,8 +23,29 @@ class CoinPageResult extends React.Component {
     this.setState({
       currentPrice: priceResponse
     });
-    console.log(this.state.currentPrice);
   }
+
+  addToPortofolio = async coin => {
+    const amount = prompt(
+      `How much ${this.props.match.params.id} are you adding to your Portfolio?`
+    );
+    const settings = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        coin: this.props.match.params.id,
+        amount
+      })
+    };
+    try {
+      const request = await fetch("http://localhost:5000/users/add", settings);
+      const response = await request.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   render(props) {
     const { ImageUrl, CoinName, Algorithm } = this.state.currentCoin;
@@ -36,6 +57,10 @@ class CoinPageResult extends React.Component {
         <h2>Algorithm: {Algorithm}</h2>
         <h2>Price: ${this.state.currentPrice.USD}</h2>
         <h2>Price: £{this.state.currentPrice.GBP}</h2>
+        <div className="buttons-container">
+          <button onClick={this.addToPortofolio}>Add To Portfolio</button>
+          <button onClick={() => this.props.history.goBack()}>Back</button>
+        </div>
       </div>
     );
   }

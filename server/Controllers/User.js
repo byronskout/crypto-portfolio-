@@ -47,3 +47,32 @@ exports.login = async (req, res, next) => {
     console.log(error.message);
   }
 };
+
+exports.addToPortfolio = async (req, res, next) => {
+  const { coin, amount } = req.body;
+  try {
+    const user = await User.findOne({ _id: "5d83c3d99952eb2f99c85e9e" });
+    const find = user.Portfolio.find(element => {
+      return element.coin === coin;
+    });
+    console.log("find", find);
+    const totalAmount = find
+      ? Number(find.amount) + Number(amount)
+      : Number(amount);
+
+    const filter = user.Portfolio.filter(element => {
+      return element.coin !== coin;
+    });
+    console.log("filter", filter);
+    user.Portfolio = filter;
+    const coinToAdd = {
+      coin,
+      amount: totalAmount
+    };
+    user.Portfolio.push(coinToAdd);
+    await user.save();
+    res.json(user);
+  } catch (error) {
+    console.log(error);
+  }
+};
