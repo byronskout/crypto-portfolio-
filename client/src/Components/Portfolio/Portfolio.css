@@ -1,0 +1,21 @@
+.select {
+    margin-bottom: 35px;
+    margin-right: 5px;
+}
+
+.pie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Dropdown-root {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform: translate3d(-50%,-50%,0);
+    width: 100px;
+    padding-top: 50px;
+}

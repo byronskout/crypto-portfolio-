@@ -1,5 +1,6 @@
 .footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f1f1f1;
-  width: 30%;
-  margin: auto;
 }

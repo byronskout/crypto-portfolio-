@@ -45,7 +45,6 @@ class CryptoCoinList extends React.Component {
     this.setState({
       searchResults: [...this.state.searchResults, filter]
     });
-    console.log(this.state.searchResults);
   };
 
   render() {

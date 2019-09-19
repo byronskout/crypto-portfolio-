@@ -1,6 +1,7 @@
 import React from "react";
 import "./NewsContainer.css";
 import NewsCard from "./NewsCard/NewsCard";
+import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 class NewsContainer extends React.Component {
   state = {
@@ -29,6 +30,9 @@ class NewsContainer extends React.Component {
             return <NewsCard news={item} key={item.id} />;
           })}
         </div>
+        <ScrollUpButton 
+        style={{backgroundColour: "white"}}
+        />
       </div>
     );
   }

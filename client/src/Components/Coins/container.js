@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 35px;
+  border-radius: 20px;
   -webkit-box-shadow: -4px 9px 83px -23px rgba(0,0,0,0.75);
   -moz-box-shadow: -4px 9px 83px -23px rgba(0,0,0,0.75);
   box-shadow: -4px 9px 83px -23px rgba(0,0,0,0.75);
