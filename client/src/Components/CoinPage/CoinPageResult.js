@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 class CoinPageResult extends React.Component {
   state = {
     currentCoin: "",
-    currentPrice: ""
+    currentPrice: {}
   };
 
   async componentDidMount() {
@@ -34,6 +34,8 @@ class CoinPageResult extends React.Component {
         <h2>{CoinName}</h2>
         <img className="coin-image" alt={CoinName} src={link} width="150px" />
         <h2>Algorithm: {Algorithm}</h2>
+        <h2>Price: ${this.state.currentPrice.USD}</h2>
+        <h2>Price: £{this.state.currentPrice.GBP}</h2>
       </div>
     );
   }

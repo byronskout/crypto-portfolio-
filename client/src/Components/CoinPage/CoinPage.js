@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 class CoinPage extends React.Component {
   state = {
     currentCoin: "",
-    currentPrice: ""
+    currentPrice: []
   };
 
   async componentDidMount() {
@@ -21,19 +21,28 @@ class CoinPage extends React.Component {
   );
   const priceResponse = await priceRequest.json();
   this.setState({
-    currentPrice: priceResponse
+    currentPrice: Object.values(priceResponse[1])
   });
-  console.log(this.state.currentPrice);
+  // console.log(this.state.currentPrice);
+  // const a = this.props.match.params.id;
+  // const b = this.state.currentPrice[1][a].USD.PRICE
+  // console.log(b)
+  // console.log(Object.keys(this.state.currentPrice[1])[0])
 };
 
     render() {
     const { ImageUrl, Name, Algorithm } = this.state.currentCoin;
+    const a = this.props.match.params
+    const b = a.id
+    const c = this.state.currentPrice[0]
+    console.log(c);
+    console.log(b);
     const link = `https://www.cryptocompare.com${ImageUrl}`;
     return (
         <div className="single-img-con">
         <h2>{Name}</h2>
         <img className="coin-image" alt={Name} src={link} width="150px" />
-        <h2>Algorithm: {Algorithm}</h2>     
+        <h2>Algorithm: {Algorithm}</h2>
         </div>
     )};
 };
